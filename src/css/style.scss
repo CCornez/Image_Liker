@@ -1,0 +1,141 @@
+@use "./base/mixins" as *;
+@use "./base/variables" as *;
+@use "./base/reset";
+@use "./base/fonts";
+@use "../icons/style.css";
+
+html {
+  font-size: 62.5%;
+}
+
+.search {
+  width: 56%;
+  margin: 2em auto;
+  form {
+    position: relative;
+    #input-search {
+      position: absolute;
+      top: 0.9em;
+      left: 1em;
+      font-size: 1.8em;
+      color: gray;
+    }
+    input {
+      width: 100%;
+      padding: 1em;
+      padding-left: 3em;
+      font-size: 1.6em;
+      background-color: $whitedark;
+      border: none;
+      border-radius: 2em;
+      outline: none;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 20px;
+  background-color: $graylight;
+  section {
+    background-color: $white;
+    width: calc(100% / 3 - 25px);
+    transition: all 300ms;
+    .image-curve {
+      width: 100%;
+      position: relative;
+      margin-bottom: 25px;
+      img {
+        @extend %responsive;
+      }
+      .curve {
+        width: 100px;
+        position: absolute;
+        bottom: -20px;
+        &::before {
+          position: absolute;
+          top: 2px;
+          left: 37px;
+          content: "";
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: rgb(255, 255, 0);
+        }
+      }
+      .download {
+        position: absolute;
+        left: calc(50px - 7px);
+        bottom: 0px;
+        font-size: 14px;
+      }
+    }
+    h2 {
+      position: relative;
+      font-family: "Roboto", sans-serif;
+      padding: 0 1em 2em 1em;
+      font-size: 1.4em;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $gray;
+      }
+    }
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+      font-size: 1.4em;
+      color: gray;
+      a {
+        position: relative;
+        color: gray;
+        transition: all 300ms;
+      }
+      .icons1 {
+        display: flex;
+        align-items: center;
+        a {
+          &:first-child::after {
+            position: absolute;
+            top: -7px;
+            left: -7px;
+            content: "";
+            width: 25px;
+            height: 25px;
+            border: 1px solid $graydark;
+            border-radius: 50%;
+            background-color: rgba(202, 202, 202, 0.3);
+          }
+          &:nth-child(2) {
+            margin-left: 10px;
+            font-size: 1.8em;
+          }
+        }
+      }
+      .icons2 {
+        display: flex;
+        align-items: center;
+        font-size: 1.2em;
+        h3 {
+          font-size: 0.8em;
+          margin-left: 2px;
+          font-family: "Roboto", sans-serif;
+        }
+        svg:nth-child(3) {
+          margin-left: 10px;
+        }
+      }
+    }
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 10px 20px rgba(128, 128, 128, 0.5);
+    }
+  }
+}
