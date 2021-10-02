@@ -9,7 +9,6 @@
   </head>
   <body>
     <include src="./symbol-defs.svg"></include>
-
     <div class="search">
       <form action="">
         <div id="input-search">
@@ -20,140 +19,95 @@
         <input type="text" placeholder="reef" />
       </form>
     </div>
-    <main>
-      <section>
-        <div class="image-curve">
-          <img
-            src="./images/francesco-ungaro-MJ1Q7hHeGlA-unsplash.jpg"
-            alt="reef"
-          />
-          <div class="curve">
-            <include src="./curve.svg"></include>
-          </div>
-          <div class="download">
-            <svg class="icon icon-download">
-              <use href="#icon-download" />
-            </svg>
-          </div>
-        </div>
-        <h2>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti
-          labore maxime sint dolor? Rerum, perferendis?
-        </h2>
-        <div class="icons">
-          <div class="icons1">
-            <a href=""
-              ><svg class="icon icon-bookmark">
-                <use href="#icon-bookmark" />
+    <div id="container">
+      <main>
+        <section>
+          <div class="image-curve">
+            <img
+              src="./images/francesco-ungaro-MJ1Q7hHeGlA-unsplash.jpg"
+              alt="reef"
+            />
+            <div class="curve">
+              <include src="./curve.svg"></include>
+            </div>
+            <div class="download">
+              <svg class="icon icon-download">
+                <use href="#icon-download" />
               </svg>
-            </a>
-            <a href="">
-              <svg class="icon icon-navigation-more">
-                <use href="#icon-navigation-more" />
+            </div>
+          </div>
+          <h2>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti
+            labore maxime sint dolor? Rerum, perferendis?
+          </h2>
+          <div class="icons">
+            <div class="icons1">
+              <a href=""
+                ><svg class="icon icon-bookmark">
+                  <use href="#icon-bookmark" />
+                </svg>
+              </a>
+              <a href="">
+                <svg class="icon icon-navigation-more">
+                  <use href="#icon-navigation-more" />
+                </svg>
+              </a>
+            </div>
+            <div class="icons2">
+              <svg class="icon icon-view-show">
+                <use href="#icon-view-show" />
               </svg>
-            </a>
-          </div>
-          <div class="icons2">
-            <svg class="icon icon-view-show">
-              <use href="#icon-view-show" />
-            </svg>
-            <h3>542</h3>
-            <svg class="icon icon-mail-forward">
-              <use href="#icon-mail-forward" />
-            </svg>
-            <h3>443</h3>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="image-curve">
-          <img
-            src="./images/francesco-ungaro-MJ1Q7hHeGlA-unsplash.jpg"
-            alt="reef"
-          />
-          <div class="curve">
-            <include src="./curve.svg"></include>
-          </div>
-          <div class="download">
-            <svg class="icon icon-download">
-              <use href="#icon-download" />
-            </svg>
-          </div>
-        </div>
-        <h2>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti
-          labore maxime sint dolor? Rerum, perferendis?
-        </h2>
-        <div class="icons">
-          <div class="icons1">
-            <a href=""
-              ><svg class="icon icon-bookmark">
-                <use href="#icon-bookmark" />
+              <h3>542</h3>
+              <svg class="icon icon-mail-forward">
+                <use href="#icon-mail-forward" />
               </svg>
-            </a>
-            <a href="">
-              <svg class="icon icon-navigation-more">
-                <use href="#icon-navigation-more" />
-              </svg>
-            </a>
+              <h3>443</h3>
+            </div>
           </div>
-          <div class="icons2">
-            <svg class="icon icon-view-show">
-              <use href="#icon-view-show" />
-            </svg>
-            <h3>542</h3>
-            <svg class="icon icon-mail-forward">
-              <use href="#icon-mail-forward" />
-            </svg>
-            <h3>443</h3>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="image-curve">
-          <img
-            src="./images/francesco-ungaro-MJ1Q7hHeGlA-unsplash.jpg"
-            alt="reef"
-          />
-          <div class="curve">
-            <include src="./curve.svg"></include>
-          </div>
-          <div class="download">
-            <svg class="icon icon-download">
-              <use href="#icon-download" />
-            </svg>
-          </div>
-        </div>
-        <h2>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti
-          labore maxime sint dolor? Rerum, perferendis?
-        </h2>
-        <div class="icons">
-          <div class="icons1">
-            <a href=""
-              ><svg class="icon icon-bookmark">
-                <use href="#icon-bookmark" />
-              </svg>
-            </a>
-            <a href="">
-              <svg class="icon icon-navigation-more">
-                <use href="#icon-navigation-more" />
-              </svg>
-            </a>
-          </div>
-          <div class="icons2">
-            <svg class="icon icon-view-show">
-              <use href="#icon-view-show" />
-            </svg>
-            <h3>542</h3>
-            <svg class="icon icon-mail-forward">
-              <use href="#icon-mail-forward" />
-            </svg>
-            <h3>443</h3>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+        <template class="sectionTemplate">
+          <section>
+            <div class="image-curve">
+              <img src="#SECTION_IMAGE_URL" alt="#SECTION_IMAGE_ALT" />
+              <div class="curve">
+                <include src="./curve.svg"></include>
+              </div>
+              <div class="download">
+                <svg class="icon icon-download">
+                  <use href="#icon-download" />
+                </svg>
+              </div>
+            </div>
+            <h2>#SECTION_TEXT</h2>
+            <div class="icons">
+              <div class="icons1">
+                <a href=""
+                  ><svg class="icon icon-bookmark">
+                    <use href="#icon-bookmark" />
+                  </svg>
+                </a>
+                <a href="">
+                  <svg class="icon icon-navigation-more">
+                    <use href="#icon-navigation-more" />
+                  </svg>
+                </a>
+              </div>
+              <div class="icons2">
+                <svg class="icon icon-view-show">
+                  <use href="#icon-view-show" />
+                </svg>
+                <h3>542</h3>
+                <svg class="icon icon-mail-forward">
+                  <use href="#icon-mail-forward" />
+                </svg>
+                <h3>443</h3>
+              </div>
+            </div>
+          </section>
+        </template>
+      </main>
+      <aside></aside>
+    </div>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
