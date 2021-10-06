@@ -5,8 +5,11 @@ const input = document.querySelector(".search form input");
 const form = document.querySelector(".search form");
 const sectionTemplate = document.querySelector(".sectionTemplate").innerHTML;
 const main = document.querySelector("main");
+const loading = document.querySelector(".loading");
 
 form.onsubmit = function (e) {
+  main.classList.toggle("hide");
+  loading.classList.toggle("hide");
   e.preventDefault();
   const { value } = input;
   if (value.length > 3) {
@@ -25,6 +28,9 @@ form.onsubmit = function (e) {
         })
         .join("");
     });
+    loading.classList.toggle("hide");
+    main.classList.toggle("hide");
+    console.log("images");
   }
   input.value = "";
 };

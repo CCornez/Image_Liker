@@ -8,6 +8,14 @@ html {
   font-size: 62.5%;
 }
 
+.loading {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .search {
   width: 56%;
   margin: 2em auto;
@@ -150,7 +158,6 @@ main {
   }
 }
 aside {
-  height: 500px;
   height: 100%;
   background-color: $graylight;
 }
